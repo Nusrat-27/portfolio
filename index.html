@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nusrat Jahan • AI & Web Developer</title>
+
+    <!--google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!--boxIcon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!--coustom CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--header design-->
+    <nav class="navbar">
+        <div class="logo" onclick="showSection('home')">Nusrat Jahan</div>
+        <div class="nav-links">
+            <a href="#" onclick="showSection('education')">Education</a>
+            <a href="#" onclick="showSection('experience')">Experience</a>
+            <a href="#" onclick="showSection('research')">Research</a>
+        </div>
+    </nav>
+    <!-- Main Content Holder -->
+    <div class="content-holder">
+        <!-- Left Profile Card -->
+        <div class="profile-card">
+            <img src="1.jpg" alt="Profile Photo" class="profile-img">
+            <h3 class="name">Nusrat Jahan</h3>
+            <p class="role">Researcher | Developer</p>
+
+            <div class="social-icons">
+                <a href="mailto:n.jahan2710@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                <a href="tel:+8801763033181" target="_blank"><i class="fa-solid fa-phone"></i></a>
+                <a href="https://github.com/Nusrat-27" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/nusratnhk" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://orcid.org/my-orcid?orcid=0009-0000-9122-8673" target="_blank"><i class="fa-solid fa-user"></i></a>
+                <a href="https://www.researchgate.net/profile/Nusrat-Jahan-262?ev=hdr_xprf" target="_blank"><i class="fa-solid fa-graduation-cap"></i></a>
+                <a href="https://scholar.google.com/citations?user=0WhcBkcAAAAJ&hl=en&authuser=2" target="_blank"><i class="fa-brands fa-google"></i></a>
+            </div>
+        </div>
+        <!-- Main Page Content -->
+        <div class="home-content">
+            <!-- Home Section -->
+            <div id="home" class="section active">
+                <h1>About Me</h1>
+                <p>I am <strong>Nusrat Jahan</strong>, a passionate AI researcher driven to blend Machine Learning, NLP, and data analytics to create intelligent, human-centered solutions that inspire trust and innovation.
+                </p>
+                <p>A curious learner driven by creativity and purpose, I explore how AI and data can make life smarter and more meaningful. Guided by the belief that true knowledge begins with the humility to admit how little we know, I keep learning, creating,
+                    and evolving every day. </p>
+                <div>
+                    <a href="#" class="btn">Download CV </a>
+                </div>
+
+                <p style="font-style: italic; color: whitesmoke; text-align: center; margin-top: 20px;">"True knowledge begins with the humility to admit how little we know."</p>
+            </div>
+
+            <!-- Education Section -->
+            <section id="education" class="section">
+                <h2>🎓 Education</h2>
+
+                <!-- Education Item 1 -->
+                <div class="edu-card">
+                    <div class="edu-date">2019 – 2024</div>
+                    <h3>Southeast University</h3>
+                    <p><strong>B.Sc. in Computer Science and Engineering</strong></p>
+                    <p>
+                        Bachelor Thesis:
+                        <a href="Research.pdf" target="_blank" class="edu-link">Brain Tumor Detection using Machine Learning Algorithm </a>
+                    </p>
+                </div>
+                <!-- Education Item 2 -->
+                <div class="edu-card">
+                    <div class="edu-date">2014 – 2018</div>
+                    <h3>Dhaka Mohila Polytechnic Institute </h3>
+                    <p><strong>Diploma In Engineering (Computer Technology)</strong></p>
+                    <p>GPA: 3.33 / 4.00</p>
+                </div>
+
+                <!-- Education Item 3 -->
+                <div class="edu-card">
+                    <div class="edu-date">2011 – 2013</div>
+                    <h3>Protapgonj High School</h3>
+                    <p><strong>Secondary School Certificate (SSC)</strong></p>
+                    <p>GPA: 4.88 / 5.00</p>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="section">
+                <h2>🧠 Skills</h2>
+
+                <div class="collapsible-container">
+                    <!-- Skill Areas -->
+                    <button class="collapsible">Skills Areas</button>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Python - foundation for AI, ML, and data analysis</li>
+                            <li>Machine & Deep Learning — TensorFlow · Keras · Scikit-learn</li>
+                            <li>Explainable AI (XAI) — SHAP & LIME for model interpretation</li>
+                            <li>Web Development — HTML · CSS · JavaScript</li>
+                        </ul>
+                    </div>
+
+                    <h2>💼 Experience</h2>
+
+                    <h3 style="margin-top: 30px;">Research Experience</h3>
+
+                    <div class="exp-item">
+                        <strong>Research Assistant (Remote)</strong> <span class="exp-date"> Sep 2025 - Present</span><br>M I S T Consulting Limited, Manchester, UK<br>
+                        <p style="font-style: italic; color: whitesmoke; text-align: center; margin-top: 20px;">“Python · ML/DL · XAI · Web Development · Continuous Learning”</p>
+                    </div>
+            </section>
+
+            <!-- Research & Publications Section -->
+            <section id="research" class="section">
+                <h2>Research & Publications</h2>
+
+                <div class="collapsible-container">
+                    <!-- Research Areas -->
+                    <button class="collapsible">Research Areas</button>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>Natural Language Processing and Cybersecurity</li>
+                            <li>Artificial Intelligence in Healthcare and Biomedical Engineering</li>
+                            <li>Machine Learning for Smart and Sustainable Manufacturing</li>
+                            <li>Data-Driven Predictive Analytics & Decision Support Systems</li>
+                            <li>Explainable and Ethical Artificial Intelligence (XAI)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Conference Publications -->
+                    <button class="collapsible">Conference Publications</button>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>
+                                M R Hasan, <strong>N. jahan</strong>, S. Islam, T. Muhammad.
+                                <em>Deep Learning-based Multi-Class Brain Abnormality Diagnosis on Bangladeshi MRI Images.</em> In: 2024 <strong>IEEE International Conference on Biomedical Engineering, Computer and Information Technology for Health (BECITHCON)</strong>
+                                <a href="https://doi.org/10.1109/BECITHCON64160.2024.10962710">DOI</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Under Review -->
+                    <button class="collapsible">Under Review</button>
+                    <div class="collapsible-content">
+                        <ul>
+                            <li>
+                                <strong>N. Jahan</strong>, Md. N. Uddin, Alamain, M. M. Hasan Mahfuz.
+                                <em>Artificial Intelligence for Hepatitis C: A Systematic Review of Opportunities and Challenges in Machine Learning and Deep Learning.</em>
+                                <strong>IEEE Transaction, 2025</strong>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!--coustom Js-->
+            <script src="script.js"></script>
+</body>
+
+</html
