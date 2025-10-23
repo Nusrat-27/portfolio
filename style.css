@@ -1,3 +1,8 @@
+/* ===== Responsive Polish Add-on (drop-in) ===== */
+
+
+/* Container width + side padding */
+
 * {
     margin: 0;
     padding: 0;
@@ -369,4 +374,111 @@ body {
 .collapsible-content a:hover {
     color: #80d0ff;
     text-decoration: underline;
+}
+
+:root {
+    --pad-x: clamp(14px, 3.6vw, 48px);
+    --maxw: 1100px;
+}
+
+.content-holder {
+    width: 100%;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding-inline: var(--pad-x);
+    gap: clamp(16px, 2.6vw, 28px);
+}
+
+
+/* Make left card size fluid and remove hard margins */
+
+.profile-card {
+    width: clamp(260px, 32vw, 340px);
+    margin-left: 0 !important;
+}
+
+.home-content {
+    margin-left: 0 !important;
+    max-width: 800px;
+}
+
+
+/* Stable, fluid profile image */
+
+.profile-img {
+    width: min(90vw, 220px);
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* Nav: better touch targets on mobile */
+
+.navbar .nav-links a {
+    padding: 8px 10px;
+}
+
+
+/* Tablet breakpoint */
+
+@media (max-width: 992px) {
+    .content-holder {
+        flex-direction: column;
+        /* stack */
+        align-items: stretch;
+        padding-block: clamp(24px, 6vw, 40px);
+    }
+    .profile-card {
+        order: -1;
+        /* bring to top */
+        margin: 0 auto;
+    }
+    .home-content {
+        max-width: 100%;
+    }
+    .edu-card {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+
+/* Mobile breakpoint */
+
+@media (max-width: 640px) {
+    .navbar {
+        padding: 12px var(--pad-x);
+    }
+    .name {
+        font-size: 26px;
+    }
+    .home-content h1 {
+        font-size: 28px;
+    }
+    .section h2 {
+        font-size: 24px;
+    }
+    .profile-card {
+        padding: 28px 20px;
+    }
+    .profile-img {
+        width: 180px;
+    }
+}
+
+
+/* Reduced motion friendly */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+    .edu-card:hover {
+        transform: none !important;
+        box-shadow: none !important;
+    }
 }
