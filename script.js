@@ -7,28 +7,34 @@ function showSection(sectionId) {
     document.getElementById(sectionId).classList.add('active');
 }
 
-// -------------------------------
-// Collapsible Functionality
-// -------------------------------
+(function() {
+    if (typeof window.showSection === "function") {
+        const original = window.showSection;
+        window.showSection = function(sectionId) {
+            original(sectionId);
+            try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (e) { window.scrollTo(0, 0); }
+        };
+    }
+})();
+
+
+// Collapsible: ensure one open at a time and arrow state sync
 document.addEventListener('DOMContentLoaded', function() {
     const collapsibles = document.querySelectorAll('.collapsible');
-
-    collapsibles.forEach(collapsible => {
-        collapsible.addEventListener('click', function() {
-            this.classList.toggle('active');
-            const content = this.nextElementSibling;
-
-            if (content.classList.contains('active')) {
-                content.classList.remove('active');
-            } else {
-                // Close any other open collapsibles
-                document.querySelectorAll('.collapsible-content.active').forEach(openContent => {
-                    openContent.classList.remove('active');
-                    openContent.previousElementSibling.classList.remove('active');
-                });
-
-                content.classList.add('active');
-            }
+    collapsibles.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // close others
+            document.querySelectorAll('.collapsible.active').forEach(openBtn => {
+                if (openBtn !== btn) {
+                    openBtn.classList.remove('active');
+                    const c = openBtn.nextElementSibling;
+                    if (c && c.classList) c.classList.remove('active');
+                }
+            });
+            // toggle current
+            btn.classList.toggle('active');
+            const content = btn.nextElementSibling;
+            if (content && content.classList) content.classList.toggle('active');
         });
     });
 });
